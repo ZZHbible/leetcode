@@ -86,6 +86,8 @@ def gameOfLife(board) -> None:
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("hello")
+    i=[1,2]
+    print(i[3:])
 
     # map={1:"a",2:"b"}
     # map_copy=copy.deepcopy(map)
