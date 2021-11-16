@@ -8,7 +8,7 @@ class Solution:
         w_dict={} #用一个哈希表映射 word:len(word) 方便查找
         for i in words:
             w_dict[i]=len(i)
-        words.sort(key=lambda a:len(a),reverse=True)    #从len长的开始遍历，感觉可以优化
+        words.sort(key=lambda a:len(a),reverse=True)
         ret=0
         # 遍历，后面的word中的ch在该word中出现就break，没出现就将ret=max(ret,w_dict[val]*w_dict[words[j]])
         for i,val in enumerate(words):
