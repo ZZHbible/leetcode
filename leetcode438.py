@@ -2,6 +2,8 @@
 # author = 'ZZH'
 # time = 2021/11/28
 # project = leetcode438
+
+from collections import defaultdict
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         p_dic = defaultdict(int)
