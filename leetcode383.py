@@ -17,3 +17,4 @@ class Solution:
             if magazine_dict[key] < val:
                 return False
         return True
+
