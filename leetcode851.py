@@ -3,6 +3,7 @@
 # time = 2021/12/15
 # project = leetcode851
 from collections import defaultdict
+from functools import lru_cache
 from typing import List
 
 
@@ -12,7 +13,7 @@ class Solution:
         richer_dict = defaultdict(list)
         for i, j in richer:
             richer_dict[j].append(i)
-
+        @lru_cache(None)
         def dfs(i):
             if ret[i] != -1:
                 return
