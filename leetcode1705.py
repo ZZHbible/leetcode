@@ -2,6 +2,7 @@
 # author = 'ZZH'
 # time = 2021/12/24
 # project = leetcode1705
+import heapq
 from queue import PriorityQueue
 from typing import List
 
@@ -32,6 +33,21 @@ class Solution:
                 ret += min(l[1], l[0] - now)
                 now += min(l[1], l[0] - now)
         return ret
+
+    def eatenApples_ans(self, apples: List[int], days: List[int]) -> int:
+        pq, i, ans = [], 0, 0
+        while i < len(apples) or pq:
+            while pq and pq[0][0] <= i:
+                heapq.heappop(pq)
+            if i < len(apples) and apples[i]:
+                heapq.heappush(pq, [i + days[i], apples[i]])
+            if pq:
+                pq[0][1] -= 1
+                ans += 1
+                if not pq[0][1]:
+                    heapq.heappop(pq)
+            i += 1
+        return ans
 
 
 solution = Solution()
