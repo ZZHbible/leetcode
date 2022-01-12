@@ -59,7 +59,7 @@ def get_instgram_photo(message):
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
 
-    bot.send_message(message.chat.id, "use command /weibo to get the weibo realtime hot  "
+    bot.send_message(message.chat.id, "use command /weibo to get the weibo realtime hot \n "
                                       "use command /ins namelist to get the ins photo ")
 
 bot.polling()
