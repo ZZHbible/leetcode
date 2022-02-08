@@ -36,7 +36,6 @@ class Solution:
 
         return ans
 
-
 n = 5
 lamps = [[0, 0], [0, 4]]
 queries = [[0, 4], [0, 1], [1, 4]]
