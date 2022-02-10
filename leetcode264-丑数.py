@@ -22,10 +22,12 @@ class Solution:
 
     def nthUglyNumber_dp(self, n: int) -> int:
         dp = [1] * (n + 1)
+        # dp 2,3,5 的下标
         dp2, dp3, dp5 = 0, 0, 0
         for i in range(1, n + 1):
             num1, num2, num3 = dp[dp2] * 2, dp[dp3] * 3, dp[dp5] * 5
             dp[i] = min(num1, num2, num3)
+            # 一定都用if 当前值比dp[i]小的时候，下标+1
             if dp[i] == num1:
                 dp2 += 1
             if dp[i] == num2:
