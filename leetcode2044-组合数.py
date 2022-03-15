@@ -7,27 +7,28 @@ from typing import List
 
 class Solution:
     def countMaxOrSubsets(self, nums: List[int]) -> int:
-        max_=nums[0]
-        self.ans=0
-        def digui(temp,k,max_,index):
-            if len(temp)==k:
-                temp_ans=nums[temp[0]]
+        max_ = nums[0]
+        self.ans = 0
+
+        def digui(temp, k, max_, index):
+            if len(temp) == k:
+                temp_ans = nums[temp[0]]
                 for i in temp:
-                    temp_ans=temp_ans|nums[i]
-                if temp_ans==max_:
-                    self.ans+=1
+                    temp_ans = temp_ans | nums[i]
+                if temp_ans == max_:
+                    self.ans += 1
                 return
             else:
-                for i in range(index,len(nums)):
+                for i in range(index, len(nums)):
                     temp.append(i)
-                    digui(temp,k,max_,i+1)
+                    digui(temp, k, max_, i + 1)
                     temp.pop()
 
         for num in nums:
-            max_=max_|num
-        for k in range(1,len(nums)+1):
-            temp=[]
-            digui(temp,k,max_,0)
+            max_ = max_ | num
+        for k in range(1, len(nums) + 1):
+            temp = []
+            digui(temp, k, max_, 0)
         return self.ans
 
     def countMaxOrSubsets_ans(self, nums: List[int]) -> int:
@@ -47,5 +48,6 @@ class Solution:
         dfs(0, 0)
         return cnt
 
-solution=Solution()
+
+solution = Solution()
 print(solution.countMaxOrSubsets([3, 2, 1, 5]))
