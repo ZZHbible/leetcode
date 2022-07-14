@@ -8,7 +8,8 @@ from typing import List
 class TrieNode:
     def __init__(self):
         self.child = [None] * 26
-        self.idxs=[]
+        self.idxs = []
+
 
 class WordFilter:
 
@@ -54,7 +55,8 @@ class WordFilter:
                 j -= 1
         return -1
 
+
 # Your WordFilter object will be instantiated and called as such:
-obj = WordFilter(["abbba","abba"])
-param_1 = obj.f("ab","ba")
+obj = WordFilter(["abbba", "abba"])
+param_1 = obj.f("ab", "ba")
 print(param_1)
