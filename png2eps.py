@@ -33,7 +33,6 @@ def pngtoeps(name):
     img = Image.open(file)
     img = transparence2white(img)
     img = img.convert('RGB')
-    Img = img.resize(())
 
     img.save(last_file, quality=100, dpi=(1200.0, 1200.0), lossless=True)
 
