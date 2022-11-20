@@ -8,6 +8,10 @@ from typing import List
 
 
 class Solution:
+    '''
+        用hash表存图信息
+        从外围往内算度为1的节点，将所有在外围节点的num加入与之连接的节点
+    '''
     def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
         mmap = defaultdict(list)
         ans = 0
