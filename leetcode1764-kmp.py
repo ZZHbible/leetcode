@@ -2,6 +2,9 @@
 # author = 'ZZH'
 # time = 2022/12/17
 # project = leetcode1764-kmp
+from typing import List
+
+
 class Solution:
     def canChoose(self, groups: List[List[int]], nums: List[int]) -> bool:
         def fail(word):
