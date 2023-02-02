@@ -24,13 +24,12 @@ class Solution:
             while i < len(nums) and j < len(group):
                 if nums[i] == group[j]:
                     i += 1
+                    j += 1
                 else:
                     if j == 0:
                         i += 1
-                        j = -1
                     else:
-                        j = f[j - 1]
-                j += 1
+                        j = f[j - 1] + 1
             if j < len(group):
                 return False
 
