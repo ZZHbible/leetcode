@@ -2,6 +2,8 @@
 # author = 'ZZH'
 # time = 2023/10/22
 # project = leetcode1402.做菜顺序
+from typing import List
+
 
 class Solution:
     def maxSatisfaction(self, satisfaction: List[int]) -> int:
